@@ -1,7 +1,7 @@
 $stdout.sync = true
 require "socket"
 
-Thread.new.do
+Thread.new do
   loop do
     sleep(1)
     $stdout.puts("hello world. time=#{Time.now}")
