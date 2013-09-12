@@ -1,5 +1,6 @@
 $stdout.sync = true
 require 'sinatra'
+set(:port, Integer(ENV['PORT'] || 8000))
 
 Thread.new do
   loop do
