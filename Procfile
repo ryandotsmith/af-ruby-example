@@ -1,1 +1,1 @@
-main: bundle exec ruby main.rb -p 8000
+main: bundle exec ruby main.rb
