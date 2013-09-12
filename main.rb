@@ -1,17 +1,11 @@
 $stdout.sync = true
-require "socket"
+require 'sinatra'
 
 Thread.new do
   loop do
     sleep(1)
-    $stdout.puts("hello world. time=#{Time.now}")
+    $stdout.puts("heartbeat=#{Time.now}")
   end
 end
 
- 
-webserver = TCPServer.new('localhost', Integer(ENV['PORT'] || 8000))
-while (session = webserver.accept)
-  session.write(Time.now)
-  session.print("Hello World!")
-  session.close
-end
+get('/') {"hello world"}
