@@ -1,1 +1,1 @@
-main: bundle exec ruby main.rb -P 8000
+main: rbenv rehash && bundle install && bundle exec ruby main.rb -p 8000
