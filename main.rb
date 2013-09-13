@@ -10,4 +10,7 @@ Thread.new do
   end
 end
 
-get('/') {"hello world"}
+get '/' do
+  $stdout.puts("at=service-request")
+  "hello world\n"
+end
